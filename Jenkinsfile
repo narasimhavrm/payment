@@ -5,12 +5,6 @@ pipeline {
 
   stages {
 
-    stage('Code Checkout ') {
-      steps {
-        echo 'Code Checkout'
-      }
-    }
-
     stage('Build ') {
           steps {
             echo 'Build'
@@ -26,7 +20,7 @@ pipeline {
 
     stage('Code Analysis ') {
           steps {
-            echo 'Code Analysis'
+            sh 'sonar-scanner -Dsonar.host.url=http://sonarqube:9000 -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.projectKey=payment'
           }
     }
 
