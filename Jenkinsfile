@@ -1,5 +1,6 @@
 @Library('roboshop') _
 
-env.cibuild = "python"
 env.component = "payment"
+env.cibuild = "python"
+
 mainci()
