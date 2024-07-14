@@ -1,0 +1,5 @@
+image:
+  repository: 079329262703.dkr.ecr.us-east-1.amazonaws.com/payment
+
+port: 8080
+component: payment
